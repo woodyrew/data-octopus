@@ -1,0 +1,10 @@
+
+/*** Colors ***/
+$primary-color: color('indigo', 'base') !default;
+$primary-color-light:  color('indigo', 'lighten-4') !default;
+$primary-color-dark:  color('indigo', 'darken-2') !default;
+
+$secondary-color: color('purple', 'accent-2') !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-1") !default;

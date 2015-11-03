@@ -1,0 +1,6 @@
+{
+  "ignore": ["./site/*", "./node_modules/*"],
+  "ext": "js, hbs, scss, md",
+  "no_exec": "npm run devstart",
+  "no_delay": "200ms"
+}
