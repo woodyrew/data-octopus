@@ -22,11 +22,14 @@
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-sass": "^1.3.0",
+    "metalsmith-serve": "0.0.7",
     "metalsmith-sitemap": "^1.0.0",
     "multimatch": "^2.0.0"
   },
   "devDependencies": {
-    "live-reload": "latest"
+    "live-reload": "latest",
+    "nodemon": "latest",
+    "webpack": "latest"
   },
   "optionalDependencies": {
     "jquery-hammerjs": "^2.0.0"
@@ -34,17 +37,13 @@
   "main": "build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "prestart": "npm run compile",
     "start": "node .",
-
     "dev": "NODE_ENV=development nodemon --exec 'npm run devstart'",
     "devstart": "npm run livereload & npm start",
-
     "precompile": "npm run clean",
     "compile": "npm run pack",
-
-    "clean": "rm -r ./assets/js/*",
+    "clean": "rm -r ./assets/js/* || echo 'No assets directory'",
     "pack": "webpack --json > webpack.stats.json",
     "livereload": "live-reload --port=9091 --delay=500 ./site"
   },
